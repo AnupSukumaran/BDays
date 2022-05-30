@@ -34,9 +34,11 @@ class PersonDetailViewController: UIViewController {
 extension PersonDetailViewController {
     
     func setValues() {
+        goBackBtn.layer.cornerRadius = 12
+        initialsView.layer.cornerRadius = 64
         lbInitials.text = viewModel?.personDetail?.name.getInitials()
         lbName.text = viewModel?.personDetail?.name
-        lbDob.text = viewModel?.personDetail?.dateOfBirth.convertDateFormate()
+        lbDob.text = viewModel?.personDetail?.dateOfBirth.ageValue()
     }
     
 }

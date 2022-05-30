@@ -11,7 +11,6 @@ import SASCustomAlert
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var bdayListView: UITableView!
-    
     @IBOutlet weak var activityIndic: UIActivityIndicatorView!
     
     var viewModel: HomeViewModel? {

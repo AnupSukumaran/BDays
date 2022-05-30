@@ -23,4 +23,19 @@ extension String {
 
     }
     
+    func ageValue(from: String = "yyyy-MM-dd") -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = from
+        guard let date = dateFormatter.date(from: self), let diffInDays = Calendar.current.dateComponents([.year], from: date, to: Date()).year else {return "-"}
+        
+        guard diffInDays >= 1 else {
+            guard let months = Calendar.current.dateComponents([.month], from: date, to: Date()).month else {return ""}
+            return "\(months) month(s) old"
+        }
+        
+
+        return "\(diffInDays) year(s) old"
+    }
+    
 }
