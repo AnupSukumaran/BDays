@@ -26,7 +26,7 @@ class PersonDetailViewController: UIViewController {
     
     @IBAction func goBackBtn(_ sender: UIButton) {
         
-        navigationController?.popViewController(animated: true)//popToRootViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
 }
