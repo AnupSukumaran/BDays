@@ -22,6 +22,9 @@
 		C59FD525284518F500DD72AE /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = C59FD524284518F500DD72AE /* schema.json */; };
 		C59FD5272845194000DD72AE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD5262845194000DD72AE /* API.swift */; };
 		C59FD52B28451A9200DD72AE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD52A28451A9200DD72AE /* HomeViewModel.swift */; };
+		C59FD52F28451C1900DD72AE /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD52E28451C1900DD72AE /* HomeTableViewCell.swift */; };
+		C59FD5312845205B00DD72AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD5302845205B00DD72AE /* Constants.swift */; };
+		C59FD534284523E800DD72AE /* StringExts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD533284523E800DD72AE /* StringExts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		C59FD524284518F500DD72AE /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		C59FD5262845194000DD72AE /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = BDays/API.swift; sourceTree = SOURCE_ROOT; };
 		C59FD52A28451A9200DD72AE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C59FD52E28451C1900DD72AE /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		C59FD5302845205B00DD72AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C59FD533284523E800DD72AE /* StringExts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +117,12 @@
 		C59FD4E92845175300DD72AE /* BDays */ = {
 			isa = PBXGroup;
 			children = (
+				C59FD532284523D500DD72AE /* Extenstions */,
 				C59FD4EA2845175300DD72AE /* AppDelegate.swift */,
 				C59FD4EC2845175300DD72AE /* SceneDelegate.swift */,
 				C59FD524284518F500DD72AE /* schema.json */,
 				C59FD4F02845175300DD72AE /* Main.storyboard */,
+				C59FD5302845205B00DD72AE /* Constants.swift */,
 				C59FD522284518A100DD72AE /* Models */,
 				C59FD52828451A4400DD72AE /* View */,
 				C59FD52928451A5100DD72AE /* ViewModel */,
@@ -163,7 +171,8 @@
 		C59FD52828451A4400DD72AE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C59FD4EE2845175300DD72AE /* HomeViewController.swift */,
+				C59FD52C28451BDE00DD72AE /* ViewControllers */,
+				C59FD52D28451BEA00DD72AE /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,6 +183,30 @@
 				C59FD52A28451A9200DD72AE /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C59FD52C28451BDE00DD72AE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C59FD4EE2845175300DD72AE /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C59FD52D28451BEA00DD72AE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C59FD52E28451C1900DD72AE /* HomeTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C59FD532284523D500DD72AE /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				C59FD533284523E800DD72AE /* StringExts.swift */,
+			);
+			path = Extenstions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,10 +372,13 @@
 			files = (
 				C59FD4EF2845175300DD72AE /* HomeViewController.swift in Sources */,
 				C59FD52B28451A9200DD72AE /* HomeViewModel.swift in Sources */,
+				C59FD52F28451C1900DD72AE /* HomeTableViewCell.swift in Sources */,
 				C59FD4EB2845175300DD72AE /* AppDelegate.swift in Sources */,
 				C59FD5202845185F00DD72AE /* Apollo.swift in Sources */,
 				C59FD4ED2845175300DD72AE /* SceneDelegate.swift in Sources */,
 				C59FD5272845194000DD72AE /* API.swift in Sources */,
+				C59FD534284523E800DD72AE /* StringExts.swift in Sources */,
+				C59FD5312845205B00DD72AE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

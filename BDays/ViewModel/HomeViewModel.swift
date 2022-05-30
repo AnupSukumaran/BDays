@@ -10,4 +10,50 @@ import UIKit
 
 class HomeViewModel: NSObject {
     
+    var personsArr = [BirthdaysQuery.Data.Person]()
+    
+    var tableReloadHandler: (() -> ())?
+    var errorHandler: ((String) -> ())?
+}
+
+extension HomeViewModel {
+    
+    func callBirthdaysAPI() {
+        Network.shared.apollo.fetch(query: BirthdaysQuery()) { result in
+            switch result {
+            case .success(let graphQLResult):
+                DispatchQueue.main.async {
+                    self.personsArr = graphQLResult.data?.person ?? []
+                    self.tableReloadHandler?()
+                }
+                
+            case .failure(let error):
+                self.errorHandler?(error.localizedDescription)
+            }
+        }
+    }
+    
+}
+
+extension HomeViewModel: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return personsArr.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: .homeTableViewCell, for: indexPath) as? HomeTableViewCell else {
+            fatalError("HomeTableViewCell missing!!")
+        }
+        
+        cell.config(person: personsArr[indexPath.row])
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    
 }
