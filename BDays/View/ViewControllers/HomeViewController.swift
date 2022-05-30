@@ -39,6 +39,11 @@ extension HomeViewController {
             print("errorStr = \(errStr)")
         }
         
+        viewModel?.didSelectRowAtIndex = { [weak self] personData in
+            guard let vc = self else {return}
+            vc.showPersonDetailViewController(personDetail: personData)
+        }
+        
     }
     
 }

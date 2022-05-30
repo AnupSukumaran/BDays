@@ -11,5 +11,5 @@ import Foundation
 extension String {
     
     static var homeTableViewCell = "HomeTableViewCell"
-    
+    static var personDetailViewController = "PersonDetailViewController"
 }

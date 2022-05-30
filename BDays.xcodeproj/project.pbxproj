@@ -25,6 +25,10 @@
 		C59FD52F28451C1900DD72AE /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD52E28451C1900DD72AE /* HomeTableViewCell.swift */; };
 		C59FD5312845205B00DD72AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD5302845205B00DD72AE /* Constants.swift */; };
 		C59FD534284523E800DD72AE /* StringExts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD533284523E800DD72AE /* StringExts.swift */; };
+		C59FD53628452E8A00DD72AE /* UIStoryboard+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD53528452E8A00DD72AE /* UIStoryboard+Ext.swift */; };
+		C59FD53828452EC500DD72AE /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD53728452EC500DD72AE /* PersonDetailViewController.swift */; };
+		C59FD53A28452F3100DD72AE /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD53928452F3100DD72AE /* UIViewController+Ext.swift */; };
+		C59FD53C2845308900DD72AE /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD53B2845308900DD72AE /* PersonDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		C59FD52E28451C1900DD72AE /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		C59FD5302845205B00DD72AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C59FD533284523E800DD72AE /* StringExts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExts.swift; sourceTree = "<group>"; };
+		C59FD53528452E8A00DD72AE /* UIStoryboard+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Ext.swift"; sourceTree = "<group>"; };
+		C59FD53728452EC500DD72AE /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
+		C59FD53928452F3100DD72AE /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		C59FD53B2845308900DD72AE /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +125,12 @@
 		C59FD4E92845175300DD72AE /* BDays */ = {
 			isa = PBXGroup;
 			children = (
+				C59FD5302845205B00DD72AE /* Constants.swift */,
 				C59FD532284523D500DD72AE /* Extenstions */,
 				C59FD4EA2845175300DD72AE /* AppDelegate.swift */,
 				C59FD4EC2845175300DD72AE /* SceneDelegate.swift */,
 				C59FD524284518F500DD72AE /* schema.json */,
 				C59FD4F02845175300DD72AE /* Main.storyboard */,
-				C59FD5302845205B00DD72AE /* Constants.swift */,
 				C59FD522284518A100DD72AE /* Models */,
 				C59FD52828451A4400DD72AE /* View */,
 				C59FD52928451A5100DD72AE /* ViewModel */,
@@ -181,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				C59FD52A28451A9200DD72AE /* HomeViewModel.swift */,
+				C59FD53B2845308900DD72AE /* PersonDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -189,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				C59FD4EE2845175300DD72AE /* HomeViewController.swift */,
+				C59FD53728452EC500DD72AE /* PersonDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -205,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				C59FD533284523E800DD72AE /* StringExts.swift */,
+				C59FD53528452E8A00DD72AE /* UIStoryboard+Ext.swift */,
+				C59FD53928452F3100DD72AE /* UIViewController+Ext.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -372,13 +384,17 @@
 			files = (
 				C59FD4EF2845175300DD72AE /* HomeViewController.swift in Sources */,
 				C59FD52B28451A9200DD72AE /* HomeViewModel.swift in Sources */,
+				C59FD53A28452F3100DD72AE /* UIViewController+Ext.swift in Sources */,
 				C59FD52F28451C1900DD72AE /* HomeTableViewCell.swift in Sources */,
+				C59FD53828452EC500DD72AE /* PersonDetailViewController.swift in Sources */,
 				C59FD4EB2845175300DD72AE /* AppDelegate.swift in Sources */,
+				C59FD53628452E8A00DD72AE /* UIStoryboard+Ext.swift in Sources */,
 				C59FD5202845185F00DD72AE /* Apollo.swift in Sources */,
 				C59FD4ED2845175300DD72AE /* SceneDelegate.swift in Sources */,
 				C59FD5272845194000DD72AE /* API.swift in Sources */,
 				C59FD534284523E800DD72AE /* StringExts.swift in Sources */,
 				C59FD5312845205B00DD72AE /* Constants.swift in Sources */,
+				C59FD53C2845308900DD72AE /* PersonDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

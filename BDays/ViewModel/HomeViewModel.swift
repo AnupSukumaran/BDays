@@ -13,6 +13,7 @@ class HomeViewModel: NSObject {
     var personsArr = [BirthdaysQuery.Data.Person]()
     
     var tableReloadHandler: (() -> ())?
+    var didSelectRowAtIndex: ((BirthdaysQuery.Data.Person) -> ())?
     var errorHandler: ((String) -> ())?
 }
 
@@ -52,7 +53,7 @@ extension HomeViewModel: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        didSelectRowAtIndex?(personsArr[indexPath.row])
     }
     
     
