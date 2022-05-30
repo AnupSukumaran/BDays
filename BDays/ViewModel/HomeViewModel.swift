@@ -20,18 +20,20 @@ class HomeViewModel: NSObject {
 extension HomeViewModel {
     
     func callBirthdaysAPI() {
-        Network.shared.apollo.fetch(query: BirthdaysQuery()) { result in
+        
+        Network.shared.callBirthdaysAPI { result in
             switch result {
-            case .success(let graphQLResult):
+            case .success(let personArrData):
                 DispatchQueue.main.async {
-                    self.personsArr = graphQLResult.data?.person ?? []
+                    self.personsArr = personArrData
                     self.tableReloadHandler?()
                 }
                 
-            case .failure(let error):
-                self.errorHandler?(error.localizedDescription)
+            case .failure(let err, _):
+                self.errorHandler?(err)
             }
         }
+        
     }
     
 }

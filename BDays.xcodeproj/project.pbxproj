@@ -17,7 +17,7 @@
 		C59FD50C2845175700DD72AE /* BDaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD50B2845175700DD72AE /* BDaysUITests.swift */; };
 		C59FD50E2845175700DD72AE /* BDaysUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD50D2845175700DD72AE /* BDaysUITestsLaunchTests.swift */; };
 		C59FD51D2845184B00DD72AE /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = C59FD51C2845184B00DD72AE /* Apollo */; };
-		C59FD5202845185F00DD72AE /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD51E2845185F00DD72AE /* Apollo.swift */; };
+		C59FD5202845185F00DD72AE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD51E2845185F00DD72AE /* Network.swift */; };
 		C59FD5212845185F00DD72AE /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = C59FD51F2845185F00DD72AE /* Queries.graphql */; };
 		C59FD525284518F500DD72AE /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = C59FD524284518F500DD72AE /* schema.json */; };
 		C59FD5272845194000DD72AE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD5262845194000DD72AE /* API.swift */; };
@@ -30,6 +30,7 @@
 		C59FD53A28452F3100DD72AE /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD53928452F3100DD72AE /* UIViewController+Ext.swift */; };
 		C59FD53C2845308900DD72AE /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD53B2845308900DD72AE /* PersonDetailViewModel.swift */; };
 		C59FD53F28453B8600DD72AE /* SASCustomAlert in Frameworks */ = {isa = PBXBuildFile; productRef = C59FD53E28453B8600DD72AE /* SASCustomAlert */; };
+		C59FD5432845583D00DD72AE /* NetworkAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59FD5422845583D00DD72AE /* NetworkAPITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +64,7 @@
 		C59FD5072845175700DD72AE /* BDaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BDaysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59FD50B2845175700DD72AE /* BDaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDaysUITests.swift; sourceTree = "<group>"; };
 		C59FD50D2845175700DD72AE /* BDaysUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDaysUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C59FD51E2845185F00DD72AE /* Apollo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
+		C59FD51E2845185F00DD72AE /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		C59FD51F2845185F00DD72AE /* Queries.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
 		C59FD524284518F500DD72AE /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		C59FD5262845194000DD72AE /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = BDays/API.swift; sourceTree = SOURCE_ROOT; };
@@ -75,6 +76,7 @@
 		C59FD53728452EC500DD72AE /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		C59FD53928452F3100DD72AE /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		C59FD53B2845308900DD72AE /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
+		C59FD5422845583D00DD72AE /* NetworkAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +138,7 @@
 				C59FD522284518A100DD72AE /* Models */,
 				C59FD52828451A4400DD72AE /* View */,
 				C59FD52928451A5100DD72AE /* ViewModel */,
-				C59FD51A2845180600DD72AE /* GraphQL_Files */,
+				C59FD51A2845180600DD72AE /* Network+GraphQLFiles */,
 				C59FD4F32845175700DD72AE /* Assets.xcassets */,
 				C59FD4F52845175700DD72AE /* LaunchScreen.storyboard */,
 				C59FD4F82845175700DD72AE /* Info.plist */,
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				C59FD5012845175700DD72AE /* BDaysTests.swift */,
+				C59FD5422845583D00DD72AE /* NetworkAPITests.swift */,
 			);
 			path = BDaysTests;
 			sourceTree = "<group>";
@@ -161,13 +164,13 @@
 			path = BDaysUITests;
 			sourceTree = "<group>";
 		};
-		C59FD51A2845180600DD72AE /* GraphQL_Files */ = {
+		C59FD51A2845180600DD72AE /* Network+GraphQLFiles */ = {
 			isa = PBXGroup;
 			children = (
-				C59FD51E2845185F00DD72AE /* Apollo.swift */,
+				C59FD51E2845185F00DD72AE /* Network.swift */,
 				C59FD51F2845185F00DD72AE /* Queries.graphql */,
 			);
-			path = GraphQL_Files;
+			path = "Network+GraphQLFiles";
 			sourceTree = "<group>";
 		};
 		C59FD522284518A100DD72AE /* Models */ = {
@@ -393,7 +396,7 @@
 				C59FD53828452EC500DD72AE /* PersonDetailViewController.swift in Sources */,
 				C59FD4EB2845175300DD72AE /* AppDelegate.swift in Sources */,
 				C59FD53628452E8A00DD72AE /* UIStoryboard+Ext.swift in Sources */,
-				C59FD5202845185F00DD72AE /* Apollo.swift in Sources */,
+				C59FD5202845185F00DD72AE /* Network.swift in Sources */,
 				C59FD4ED2845175300DD72AE /* SceneDelegate.swift in Sources */,
 				C59FD5272845194000DD72AE /* API.swift in Sources */,
 				C59FD534284523E800DD72AE /* StringExts.swift in Sources */,
@@ -407,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C59FD5022845175700DD72AE /* BDaysTests.swift in Sources */,
+				C59FD5432845583D00DD72AE /* NetworkAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

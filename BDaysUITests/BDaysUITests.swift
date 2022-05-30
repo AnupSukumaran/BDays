@@ -14,7 +14,7 @@ class BDaysUITests: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
+        XCUIApplication().launch()
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
@@ -28,6 +28,24 @@ class BDaysUITests: XCTestCase {
         app.launch()
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let frontTxt = app.staticTexts["Birthdays"]
+        XCTAssertTrue(frontTxt.exists)
+        
+        let homeNav = app.navigationBars["Birthdays"]
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: homeNav, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        
+        if (app.tables.element(boundBy: 0).cells.count > 0) {
+            app.tables.element(boundBy: 0).cells.element(boundBy: 0).tap()
+            let backBtn = app.buttons["GO BACK"]
+            expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: backBtn, handler: nil)
+            waitForExpectations(timeout: 5, handler: nil)
+            backBtn.tap()
+            
+        }
+    
+        
     }
 
     func testLaunchPerformance() throws {
